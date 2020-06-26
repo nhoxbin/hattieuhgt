@@ -1,0 +1,5 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteRule ^([^/]+)\.html$ /index.php?page=$1 [L]
+RewriteRule ^tin-tuc/([^/]+)\.html$ /index.php?news=$1 [L,QSA]
