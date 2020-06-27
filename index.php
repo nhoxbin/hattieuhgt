@@ -1,6 +1,5 @@
 <?php
-    if ((!empty($_GET['page']) && !file_exists("pages/{$_GET['page']}.php")) ||
-        (!empty($_GET['news']) && !file_exists("news/{$_GET['news']}.php"))) {
+    if (!empty($_GET['page']) && !file_exists("pages/{$_GET['page']}.php")) {
         die('404 not found!');
     }
 ?>
@@ -388,7 +387,7 @@
                     ]];
                     foreach ($navs as $key => $value) {
                 ?>
-                    <li id="menu-item-<?= $key ?>" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?= $value['title'] ?>"><?= $value['title'] ?></a></li>
+                    <li id="menu-item-<?= $key ?>" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?= $value['url'] ?>"><?= $value['title'] ?></a></li>
                 <?php } ?>
             </ul>
         </nav>
